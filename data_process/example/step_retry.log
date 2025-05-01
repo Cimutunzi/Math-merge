@@ -1,0 +1,72 @@
+nohup: ignoring input
+Retrying Failed Indices:   0%|          | 0/69 [00:00<?, ?it/s]Retrying Failed Indices:   1%|▏         | 1/69 [00:02<02:56,  2.60s/it]Retrying Failed Indices:   3%|▎         | 2/69 [00:05<02:46,  2.49s/it]Retrying Failed Indices:   4%|▍         | 3/69 [00:07<02:41,  2.44s/it]Retrying Failed Indices:   6%|▌         | 4/69 [00:09<02:41,  2.49s/it]Retrying Failed Indices:   7%|▋         | 5/69 [00:12<02:44,  2.57s/it]Retrying Failed Indices:   9%|▊         | 6/69 [00:15<02:41,  2.57s/it]Retrying Failed Indices:  10%|█         | 7/69 [00:18<02:45,  2.67s/it]Retrying Failed Indices:  12%|█▏        | 8/69 [00:20<02:43,  2.68s/it]Retrying Failed Indices:  13%|█▎        | 9/69 [00:23<02:39,  2.66s/it]Retrying Failed Indices:  14%|█▍        | 10/69 [00:26<02:41,  2.73s/it]Retrying Failed Indices:  16%|█▌        | 11/69 [00:28<02:34,  2.66s/it]Retrying Failed Indices:  17%|█▋        | 12/69 [00:31<02:36,  2.74s/it]Retrying Failed Indices:  19%|█▉        | 13/69 [00:34<02:35,  2.78s/it]Retrying Failed Indices:  20%|██        | 14/69 [00:37<02:32,  2.77s/it]Retrying Failed Indices:  22%|██▏       | 15/69 [00:40<02:29,  2.76s/it]Retrying Failed Indices:  23%|██▎       | 16/69 [00:42<02:27,  2.78s/it]Retrying Failed Indices:  25%|██▍       | 17/69 [00:45<02:24,  2.78s/it]Retrying Failed Indices:  26%|██▌       | 18/69 [00:48<02:17,  2.71s/it]Retrying Failed Indices:  28%|██▊       | 19/69 [00:51<02:16,  2.74s/it]Retrying Failed Indices:  29%|██▉       | 20/69 [00:53<02:11,  2.68s/it]Retrying Failed Indices:  30%|███       | 21/69 [00:56<02:08,  2.68s/it]Retrying Failed Indices:  32%|███▏      | 22/69 [00:58<02:05,  2.67s/it]Retrying Failed Indices:  33%|███▎      | 23/69 [01:01<02:00,  2.62s/it]Retrying Failed Indices:  35%|███▍      | 24/69 [01:04<01:57,  2.62s/it]Retrying Failed Indices:  36%|███▌      | 25/69 [01:06<01:57,  2.68s/it]Retrying Failed Indices:  38%|███▊      | 26/69 [01:09<01:53,  2.64s/it]Retrying Failed Indices:  39%|███▉      | 27/69 [01:12<01:50,  2.64s/it]Retrying Failed Indices:  41%|████      | 28/69 [01:14<01:46,  2.60s/it]Retrying Failed Indices:  42%|████▏     | 29/69 [01:17<01:43,  2.58s/it]Retrying Failed Indices:  43%|████▎     | 30/69 [01:19<01:41,  2.60s/it]Retrying Failed Indices:  45%|████▍     | 31/69 [01:22<01:39,  2.62s/it]Retrying Failed Indices:  46%|████▋     | 32/69 [01:25<01:37,  2.64s/it]Retrying Failed Indices:  48%|████▊     | 33/69 [01:27<01:37,  2.72s/it]Retrying Failed Indices:  49%|████▉     | 34/69 [01:30<01:32,  2.65s/it]Retrying Failed Indices:  51%|█████     | 35/69 [01:33<01:30,  2.67s/it]Retrying Failed Indices:  52%|█████▏    | 36/69 [01:35<01:25,  2.58s/it]Retrying Failed Indices:  54%|█████▎    | 37/69 [01:38<01:22,  2.59s/it]Retrying Failed Indices:  55%|█████▌    | 38/69 [01:40<01:19,  2.57s/it]Retrying Failed Indices:  57%|█████▋    | 39/69 [01:43<01:16,  2.55s/it]Retrying Failed Indices:  58%|█████▊    | 40/69 [01:45<01:11,  2.48s/it]Retrying Failed Indices:  59%|█████▉    | 41/69 [01:48<01:09,  2.49s/it]Retrying Failed Indices:  61%|██████    | 42/69 [01:50<01:06,  2.46s/it]Retrying Failed Indices:  62%|██████▏   | 43/69 [01:52<01:03,  2.43s/it]Retrying Failed Indices:  64%|██████▍   | 44/69 [01:55<01:04,  2.58s/it]Retrying Failed Indices:  65%|██████▌   | 45/69 [01:58<01:04,  2.67s/it]Retrying Failed Indices:  67%|██████▋   | 46/69 [02:01<01:01,  2.66s/it]Retrying Failed Indices:  68%|██████▊   | 47/69 [02:03<00:57,  2.59s/it]Retrying Failed Indices:  70%|██████▉   | 48/69 [02:06<00:55,  2.62s/it]Retrying Failed Indices:  71%|███████   | 49/69 [02:08<00:52,  2.63s/it]Retrying Failed Indices:  72%|███████▏  | 50/69 [02:11<00:50,  2.65s/it]Retrying Failed Indices:  74%|███████▍  | 51/69 [02:14<00:47,  2.65s/it]Retrying Failed Indices:  75%|███████▌  | 52/69 [02:16<00:44,  2.65s/it]Retrying Failed Indices:  77%|███████▋  | 53/69 [02:19<00:42,  2.65s/it]Retrying Failed Indices:  78%|███████▊  | 54/69 [02:22<00:39,  2.61s/it]Retrying Failed Indices:  80%|███████▉  | 55/69 [02:24<00:36,  2.58s/it]Retrying Failed Indices:  81%|████████  | 56/69 [02:27<00:33,  2.61s/it]Retrying Failed Indices:  83%|████████▎ | 57/69 [02:29<00:31,  2.61s/it]Retrying Failed Indices:  84%|████████▍ | 58/69 [02:32<00:29,  2.65s/it]Retrying Failed Indices:  86%|████████▌ | 59/69 [02:35<00:27,  2.74s/it]Retrying Failed Indices:  87%|████████▋ | 60/69 [02:38<00:23,  2.66s/it]Retrying Failed Indices:  88%|████████▊ | 61/69 [02:40<00:20,  2.61s/it]Retrying Failed Indices:  90%|████████▉ | 62/69 [02:43<00:18,  2.62s/it]Retrying Failed Indices:  91%|█████████▏| 63/69 [02:46<00:16,  2.70s/it]Retrying Failed Indices:  93%|█████████▎| 64/69 [02:48<00:13,  2.73s/it]Retrying Failed Indices:  94%|█████████▍| 65/69 [02:51<00:10,  2.74s/it]Retrying Failed Indices:  96%|█████████▌| 66/69 [02:54<00:07,  2.62s/it]Retrying Failed Indices:  97%|█████████▋| 67/69 [02:56<00:05,  2.62s/it]Retrying Failed Indices:  99%|█████████▊| 68/69 [02:59<00:02,  2.61s/it]Retrying Failed Indices: 100%|██████████| 69/69 [03:02<00:00,  2.70s/it]Retrying Failed Indices: 100%|██████████| 69/69 [03:02<00:00,  2.64s/it]
+最终失败，跳过 idx = 52
+最终失败，跳过 idx = 128
+最终失败，跳过 idx = 190
+最终失败，跳过 idx = 207
+最终失败，跳过 idx = 268
+最终失败，跳过 idx = 351
+最终失败，跳过 idx = 554
+最终失败，跳过 idx = 630
+最终失败，跳过 idx = 753
+最终失败，跳过 idx = 758
+最终失败，跳过 idx = 1481
+最终失败，跳过 idx = 1847
+最终失败，跳过 idx = 1901
+最终失败，跳过 idx = 2122
+最终失败，跳过 idx = 2132
+最终失败，跳过 idx = 2147
+最终失败，跳过 idx = 2192
+最终失败，跳过 idx = 2247
+最终失败，跳过 idx = 2307
+最终失败，跳过 idx = 2316
+最终失败，跳过 idx = 2325
+最终失败，跳过 idx = 2450
+最终失败，跳过 idx = 2475
+最终失败，跳过 idx = 2636
+最终失败，跳过 idx = 2716
+最终失败，跳过 idx = 2820
+最终失败，跳过 idx = 3053
+最终失败，跳过 idx = 3118
+最终失败，跳过 idx = 3150
+最终失败，跳过 idx = 3500
+最终失败，跳过 idx = 3674
+最终失败，跳过 idx = 3985
+最终失败，跳过 idx = 4018
+最终失败，跳过 idx = 4087
+最终失败，跳过 idx = 4088
+最终失败，跳过 idx = 4217
+最终失败，跳过 idx = 4224
+最终失败，跳过 idx = 4230
+最终失败，跳过 idx = 4242
+最终失败，跳过 idx = 4244
+最终失败，跳过 idx = 4298
+最终失败，跳过 idx = 4310
+最终失败，跳过 idx = 4874
+最终失败，跳过 idx = 5730
+最终失败，跳过 idx = 5926
+最终失败，跳过 idx = 6027
+最终失败，跳过 idx = 6055
+最终失败，跳过 idx = 6222
+最终失败，跳过 idx = 6326
+最终失败，跳过 idx = 6560
+最终失败，跳过 idx = 6775
+最终失败，跳过 idx = 6893
+最终失败，跳过 idx = 7005
+最终失败，跳过 idx = 7160
+最终失败，跳过 idx = 7162
+最终失败，跳过 idx = 7554
+最终失败，跳过 idx = 7759
+最终失败，跳过 idx = 7776
+最终失败，跳过 idx = 7933
+最终失败，跳过 idx = 8194
+最终失败，跳过 idx = 8260
+最终失败，跳过 idx = 8264
+最终失败，跳过 idx = 8333
+最终失败，跳过 idx = 8340
+最终失败，跳过 idx = 8474
+最终失败，跳过 idx = 8583
+最终失败，跳过 idx = 8617
+最终失败，跳过 idx = 8814
+最终失败，跳过 idx = 8816
+处理完成，JSONL 文件已保存到 /data/qq/math-evaluation-harness/data/math-merge/step_retry.jsonl

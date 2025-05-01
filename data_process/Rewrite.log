@@ -1,0 +1,70 @@
+nohup llamafactory-cli train /data/qq/LLaMA-Factory/config/llama_8b_ins_math_stage_3.yaml > saves/Llama-3-8B-Instruct/lora/math/save_logs/math_stage_base.log 2>&1 &
+nohup env CUDA_VISIBLE_DEVICES=1 llamafactory-cli train /data/qq/LLaMA-Factory/config/Qwen/Qwen2-1.5B-Instruct/gsm8k_stage_base.yaml > saves/Qwen/Qwen2-1.5B-Instruct/lora/gsm8k/save_logs/stage_base.log 2>&1 &
+nohup env CUDA_VISIBLE_DEVICES=2 llamafactory-cli train /data/qq/LLaMA-Factory/config/Qwen/Qwen2-1.5B-Instruct/gsm8k_stage_1.yaml > saves/Qwen/Qwen2-1.5B-Instruct/lora/gsm8k/save_logs/stage_1.log 2>&1 &
+nohup env CUDA_VISIBLE_DEVICES=1 llamafactory-cli train /data/qq/LLaMA-Factory/config/Qwen/Qwen2-1.5B-Instruct/gsm8k_SFT.yaml > saves/Qwen/Qwen2-1.5B-Instruct/lora/gsm8k/save_logs/SFT.log 2>&1 &
+nohup env CUDA_VISIBLE_DEVICES=3 llamafactory-cli train /data/qq/LLaMA-Factory/config/Qwen/Qwen2-1.5B-Instruct/math/stage_base.yaml > /data/qq/LLaMA-Factory/saves/Qwen/Qwen2-1.5B-Instruct/lora/math/save_logs/stage_base.log 2>&1 &
+nohup bash /data/qq/LLaMA-Factory/config/train.sh > saves/lora/save_logs/train.log 2>&1 &
+
+nohup bash /data/qq/LLaMA-Factory/config/Qwen/Qwen2.5-Math-7B/math-merge/iter/train.sh > saves/lora/save_logs/train.log 2>&1 &
+nohup bash /data/qq/LLaMA-Factory/config/Qwen/Qwen2.5-Math-7B/math-merge/train.sh > saves/lora/save_logs/train.log 2>&1 &
+nohup bash /data/qq/LLaMA-Factory/config/deepseek-math-7b-instruct/math-merge/train.sh > saves/lora/save_logs/train.log 2>&1 &
+nohup bash /data/qq/LLaMA-Factory/config/Qwen/Qwen2.5-Math-1.5B/math-merge/train.sh > saves/lora/save_logs/train.log 2>&1 &
+nohup bash /data/qq/LLaMA-Factory/config/Llama-3-8B-Instruct/math/tem_0.7/train.sh > saves/Llama-3-8B-Instruct/lora/math/save_logs/train_tem_0.7.log 2>&1 &
+mkdir -p saves/Qwen/Qwen2.5-Math-1.5B/lora/math-merge/save_logs/ && nohup bash /data/qq/LLaMA-Factory/config/Qwen/Qwen2.5-Math-1.5B/math-merge/tem_0.5/train.sh > /data/qq/LLaMA-Factory/saves/Qwen/Qwen2-1.5B-Instruct/lora/math/save_logs/train_tem_0.5.log 2>&1 &
+mkdir -p saves/Qwen2.5-Math-7B/lora/math-merge/save_logs/ && nohup llamafactory-cli train /data/qq/LLaMA-Factory/config/Qwen/Qwen2.5-Math-1.5B/math-merge/tem_0.7/direct_hard.yaml > saves/Qwen2.5-Math-1.5B/lora/math-merge/save_logs/direct_hard.log 2>&1 &
+
+nohup bash /data/qq/simpleRL-reason/train/train_sft.sh > /data/qq/simpleRL-reason/train/SFT.log 2>&1 &
+
+
+
+nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/math-merge/stage_base.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/stage_base.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/qwen/math/stage_base.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2_1.5b_ins/math/base_0.5.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/stage_base.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2_1.5b_ins/gsm8k/stage_base.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/stage_3.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2_1.5b_ins/gsm8k/stage_3.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/stage_2.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2_1.5b_ins/gsm8k/stage_2.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/stage_1.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2_1.5b_ins/gsm8k/stage_1.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/SFT.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2_1.5b_ins/gsm8k/SFT.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/llama/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/llama-8b-ins/gsm8k/train_level_0.7.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves/Qwen2_1.5b_ins/math/tem_0.5/ && nohup bash /data/qq/math-evaluation-harness/scripts/qwen/math/tem_0.5/eval.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2_1.5b_ins/math/tem_0.5/eval.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/qwen_7b/ScaleQuest-Math/tem_0.7/eval.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2_7b_ins/ScaleQuest-Math/eval.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/math-merge/tem_0.7/eval.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/eval.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/deepseek/ScaleQuest-Math/tem_0.7/eval.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/ScaleQuest-Math/eval.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves/llama-8b-ins/ScaleQuest-Math/ && nohup bash /data/qq/math-evaluation-harness/scripts/llama/ScaleQuest-Math/tem_0.5/eval.sh > /data/qq/math-evaluation-harness/log_saves/llama-8b-ins/ScaleQuest-Math/eval.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/qwen_7b/ScaleQuest-Math/tem_0.7/eval.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2_7b_ins/ScaleQuest-Math/eval.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/llama/math/tem_0.7/eval.sh > /data/qq/math-evaluation-harness/log_saves/llama-8b-ins/math/eval_0.7.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves/gemma-2-9b-it/ScaleQuest-Math/ && nohup bash /data/qq/math-evaluation-harness/scripts/gemma/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/gemma-2-9b-it/ScaleQuest-Math/train_level_0.7.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves/llama-8b-ins/ScaleQuest-Math/ && nohup bash /data/qq/math-evaluation-harness/scripts/llama/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/llama-8b-ins/ScaleQuest-Math/train_level_0.5.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves/Qwen2_1.5b_ins/ScaleQuest-Math/ && nohup bash /data/qq/math-evaluation-harness/scripts/qwen/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2_1.5b_ins/ScaleQuest-Math/train_level_0.5.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves/gemma-2-9b-it/math/ && nohup bash /data/qq/math-evaluation-harness/scripts/gemma/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/gemma-2-9b-it/math/train_level_0.7.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves/llama2-7b-chat/ScaleQuest-Math/ && nohup bash /data/qq/math-evaluation-harness/scripts/llama/eval_7b_chat.sh > /data/qq/math-evaluation-harness/log_saves/llama2-7b-chat/ScaleQuest-Math/train_level_0.7.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-base/math-merge/ && nohup bash /data/qq/math-evaluation-harness/scripts/deepseek/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-base/math-merge/step_1-2.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/ && nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/train_level_0.7.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-1.5B/math-merge/ && nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-1.5B/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-1.5B/math-merge/step_1-4.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves//Qwen2.5-14B/math-merge/ && nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-14B/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves//Qwen2.5-14B/math-merge/train_level_0.7.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/ && nohup bash /data/qq/math-evaluation-harness/scripts/deepseek/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/start_1-2.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves/Meta-Llama-3.1-8B/math-merge/ && nohup bash /data/qq/math-evaluation-harness/scripts/llama/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/Meta-Llama-3.1-8B/math-merge/train.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/math-merge/iter/eval.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/eval_iter.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/math-merge/tem_0.7/single/eval.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/eval_single.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/math-merge/tem_0.7/eval.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/eval.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-1.5B/math-merge/tem_0.7/eval.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-1.5B/math-merge/eval.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/deepseek-math-7b-instruct/math-merge/tem_0.7/eval.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/eval.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/original_eval.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/original_eval.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/hint.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/step.log 2>&1 &
+
+nohup python /data/qq/data_process/example/vllm_generate.py > /data/qq/data_process/example/vllm_generate.log 2>&1 &
+
+source /etc/profile.d/clash.sh
+
+scp -r /data/qq/LLaMA-Factory/data/math-merge qq@10.176.56.95:/data/qq/LLaMA-Factory/data/
+scp /data/qq/math-evaluation-harness/data/math-merge/train.jsonl qq@10.176.56.95:/data/qq/math-evaluation-harness/data/math-merge/train.jsonl
+scp -r C:\Users\PC\Desktop\绩讯\BOM250220.xlsx qq@10.176.56.95:/data/project/mohe/data_process/data/business_data
+
+nohup python /data/qq/GPU_moniter/GPU_moniter.py > /data/qq/GPU_moniter/GPU_moniter.log 2>&1 &
+ps aux | grep GPU_moniter.py
+
+modelscope download --model LLM-Research/Meta-Llama-3.1-8B-Instruct --local_dir /data/qq/models/Meta-Llama-3.1-8B-Instruct
+nohup  modelscope download --model LLM-Research/Meta-Llama-3.1-8B-Instruct  --local_dir /data/qq/models/Meta-Llama-3.1-8B-Instruct > /data/qq/models/download.log 2>&1 &
+
+wget -O /data/qq/data/math_hard.json https://raw.githubusercontent.com/hkust-nlp/simpleRL-reason/refs/heads/main/train/data/math_level3to5_data_processed_with_qwen_prompt.json
+
+export CUDA_VISIBLE_DEVICES=0,1
