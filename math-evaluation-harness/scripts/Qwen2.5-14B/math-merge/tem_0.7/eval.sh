@@ -1,0 +1,5 @@
+nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/math-merge/tem_0.7/stage_3.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/stage_3_0.7.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/math-merge/stage_base.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/base.log 2>&1 &
+
+nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/math-merge/tem_0.7/random_stage_3.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/stage_3_0.7_random.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/math-merge/tem_0.7/single_stage_3.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/stage_3_0.7_single.log 2>&1 &

@@ -1,0 +1,6 @@
+# nohup bash /data/qq/math-evaluation-harness/scripts/deepseek-math-7b-instruct/math-merge/tem_0.7/stage_1.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/stage_1_0.7.log 2>&1 &
+# nohup bash /data/qq/math-evaluation-harness/scripts/deepseek-math-7b-instruct/math-merge/tem_0.7/stage_2.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/stage_2_0.7.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/deepseek-math-7b-instruct/math-merge/tem_0.7/stage_3.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/stage_3_0.7.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/deepseek-math-7b-instruct/math-merge/stage_base.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/base.log 2>&1 &
+# nohup bash /data/qq/math-evaluation-harness/scripts/deepseek-math-7b-instruct/math-merge/tem_0.7/random_stage_3.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/stage_3_0.7_random.log 2>&1 &
+# nohup bash /data/qq/math-evaluation-harness/scripts/deepseek-math-7b-instruct/math-merge/tem_0.7/single_stage_3.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/stage_3_0.7_single.log 2>&1 &
