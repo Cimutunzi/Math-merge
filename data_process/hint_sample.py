@@ -1,21 +1,36 @@
 import json
 import os
 
-# 配置文件路径
+
 FILE_CONFIG = {
-    "data_file": "/data/qq/LLaMA-Factory/data/Qwen2.5-Math-7B/math-merge/tem_0.7/stage_3.jsonl",
+    "data_file": "/data/qq/LLaMA-Factory/data/Qwen2.5-Math-7B/math-merge/tem_0.7/stage_3-1.jsonl",
     "eval_result_files": [
-        "/data/qq/models/Qwen/Qwen2.5-Math-7B/math_eval/math-merge/Recording/qwen_math_7b_level_3_step_1-4_qwen_box_seed0_t0.0_n_sample_16.jsonl",
-        "/data/qq/models/Qwen/Qwen2.5-Math-7B/math_eval/math-merge/Recording/qwen_math_7b_level_3_step_1-2_qwen_box_seed0_t0.0_n_sample_16.jsonl",
-        "/data/qq/models/Qwen/Qwen2.5-Math-7B/math_eval/math-merge/Recording/qwen_math_7b_level_3_step_3-4_qwen_box_seed0_t0.0_n_sample_16.jsonl"
+        "/data/qq/models/Qwen/Qwen2.5-Math-7B/math_eval/math-merge/Recording/qwen_math_7b_level_3_step_1-4_qwen_box_seed0_t0.7_n_sample_16.jsonl",
+        "/data/qq/models/Qwen/Qwen2.5-Math-7B/math_eval/math-merge/Recording/qwen_math_7b_level_3_step_1-2_qwen_box_seed0_t0.7_n_sample_16.jsonl",
+        "/data/qq/models/Qwen/Qwen2.5-Math-7B/math_eval/math-merge/Recording/qwen_math_7b_level_3_step_3-4_qwen_box_seed0_t0.7_n_sample_16.jsonl"
     ],
     "eval_source_files": [
         "/data/qq/math-evaluation-harness/data/math-merge/qwen_math_7b_level_3_step_1-4.jsonl",
         "/data/qq/math-evaluation-harness/data/math-merge/qwen_math_7b_level_3_step_1-2.jsonl",
         "/data/qq/math-evaluation-harness/data/math-merge/qwen_math_7b_level_3_step_3-4.jsonl"
     ],
-    "output_file": "/data/qq/LLaMA-Factory/data/Qwen2.5-Math-7B/math-merge/tem_0.7/stage_3_hint.jsonl"
+    "output_file": "/data/qq/LLaMA-Factory/data/Qwen2.5-Math-7B/math-merge/tem_0.7/stage_3-3.jsonl"
 }
+# 配置文件路径
+# FILE_CONFIG = {
+#     "data_file": "/data/qq/LLaMA-Factory/data/Qwen2.5-Math-1.5B/math-merge/tem_0.7/stage_3-1.jsonl",
+#     "eval_result_files": [
+#         "/data/qq/models/Qwen/Qwen2.5-Math-1.5B/math_eval/math-merge/Recording/qwen_math_1.5b_level_3_step_1-4_qwen_box_seed0_t0.7_n_sample_16.jsonl",
+#         "/data/qq/models/Qwen/Qwen2.5-Math-1.5B/math_eval/math-merge/Recording/qwen_math_1.5b_level_3_step_1-2_qwen_box_seed0_t0.7_n_sample_16.jsonl",
+#         "/data/qq/models/Qwen/Qwen2.5-Math-1.5B/math_eval/math-merge/Recording/qwen_math_1.5b_level_3_step_3-4_qwen_box_seed0_t0.7_n_sample_16.jsonl"
+#     ],
+#     "eval_source_files": [
+#         "/data/qq/math-evaluation-harness/data/math-merge/qwen_math_1.5b_level_3_step_1-4.jsonl",
+#         "/data/qq/math-evaluation-harness/data/math-merge/qwen_math_1.5b_level_3_step_1-2.jsonl",
+#         "/data/qq/math-evaluation-harness/data/math-merge/qwen_math_1.5b_level_3_step_3-4.jsonl"
+#     ],
+#     "output_file": "/data/qq/LLaMA-Factory/data/Qwen2.5-Math-1.5B/math-merge/tem_0.7/stage_3-3.jsonl"
+# }
 
 # ---------------------- 辅助函数 ----------------------
 def validate_paths():
@@ -92,7 +107,7 @@ def main():
             # 执行替换
             try:
                 new_item = item.copy()
-                new_item['question'] = source['question']
+                new_item['question'] = source['problem']
                 new_item['answer'] = source['answer_end']
                 updated_data.append(new_item)
                 stats['replaced'][eval_idx] += 1

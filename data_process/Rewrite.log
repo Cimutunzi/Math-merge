@@ -41,7 +41,7 @@ mkdir -p /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-base/math-m
 mkdir -p /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/ && nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/train_level_0.7.log 2>&1 &
 mkdir -p /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-1.5B/math-merge/ && nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-1.5B/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-1.5B/math-merge/step_1-4.log 2>&1 &
 mkdir -p /data/qq/math-evaluation-harness/log_saves//Qwen2.5-14B/math-merge/ && nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-14B/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves//Qwen2.5-14B/math-merge/train_level_0.7.log 2>&1 &
-mkdir -p /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/ && nohup bash /data/qq/math-evaluation-harness/scripts/deepseek/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/start_1-2.log 2>&1 &
+mkdir -p /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/ && nohup bash /data/qq/math-evaluation-harness/scripts/deepseek-math-7b-instruct/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/level_3_hint.log 2>&1 &
 mkdir -p /data/qq/math-evaluation-harness/log_saves/Meta-Llama-3.1-8B/math-merge/ && nohup bash /data/qq/math-evaluation-harness/scripts/llama/run_eval_ins.sh > /data/qq/math-evaluation-harness/log_saves/Meta-Llama-3.1-8B/math-merge/train.log 2>&1 &
 nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/math-merge/iter/eval.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/eval_iter.log 2>&1 &
 nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/math-merge/tem_0.7/single/eval.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/eval_single.log 2>&1 &
@@ -50,12 +50,15 @@ nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-1.5B/math-merge
 nohup bash /data/qq/math-evaluation-harness/scripts/deepseek-math-7b-instruct/math-merge/tem_0.7/eval.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/eval.log 2>&1 &
 nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/original_eval.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/original_eval.log 2>&1 &
 nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-7B/hint.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-7B/math-merge/step.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/Qwen2.5-Math-1.5B/hint.sh > /data/qq/math-evaluation-harness/log_saves/Qwen2.5-Math-1.5B/math-merge/step.log 2>&1 &
+nohup bash /data/qq/math-evaluation-harness/scripts/deepseek-math-7b-instruct/original_eval.sh > /data/qq/math-evaluation-harness/log_saves/deepseek-math-7b-instruct/math-merge/original_eval.log 2>&1 &
 
 nohup python /data/qq/data_process/example/vllm_generate.py > /data/qq/data_process/example/vllm_generate.log 2>&1 &
 
+
 source /etc/profile.d/clash.sh
 
-scp -r /data/qq/LLaMA-Factory/data/math-merge qq@10.176.56.95:/data/qq/LLaMA-Factory/data/
+scp -r /data/qq/models/Qwen/Qwen2.5-Math-1.5B qq@10.176.56.95:/data/qq/models/Qwen/
 scp /data/qq/math-evaluation-harness/data/math-merge/train.jsonl qq@10.176.56.95:/data/qq/math-evaluation-harness/data/math-merge/train.jsonl
 scp -r C:\Users\PC\Desktop\绩讯\BOM250220.xlsx qq@10.176.56.95:/data/project/mohe/data_process/data/business_data
 

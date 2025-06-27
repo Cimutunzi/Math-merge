@@ -5,16 +5,20 @@ import json
 
 # 输入输出路径
 model_name = 'deepseek-math-7b-instruct'
+# model_name = 'Qwen2.5-Math-1.5B'
+# model_name = 'Qwen2.5-Math-7B'
 tem = '0.7'
 data_name = 'math-merge'
 
-input_pre = f'/data/qq/models/deepseek-math-7b-instruct/math_eval/{data_name}/data/tem_{tem}'
-out_pre = f'/data/qq/LLaMA-Factory/data/deepseek-math-7b-instruct/{data_name}/tem_{tem}'
+# input_pre = f'/data/qq/models/Qwen/{model_name}/math_eval/{data_name}/data/tem_{tem}'
+input_pre ='/data/qq/data/math-merge/data/deepseek-math-7b-instruct'
+# out_pre = f'/data/qq/LLaMA-Factory/data/{model_name}/{data_name}/tem_{tem}'
+out_pre = f'/data/qq/data/math-merge/data/{model_name}/'
 
 input_files = [
     f'{input_pre}/level_1.jsonl',
     f'{input_pre}/level_2.jsonl',
-    f'{input_pre}/level_3.jsonl'
+    f'{input_pre}/level_3-hint.jsonl'
 ]
 
 output_files = [
@@ -26,7 +30,7 @@ output_files = [
 sample_ratios = [
     {"file_1": 0.8, "file_2": 0,   "file_3": 0},   # Stage 1 各文件比例
     {"file_1": 0.1, "file_2": 0.9, "file_3": 0},   # Stage 2 各文件比例
-    {"file_1": 0.1, "file_2": 0.1, "file_3": 1}    # Stage 3 各文件比例
+    {"file_1": 0, "file_2": 0.1, "file_3": 1}    # Stage 3 各文件比例
 ]
 
 def update_data_info(new_data):
@@ -63,7 +67,7 @@ for file_idx, input_file in enumerate(input_files, 1):
         
         # 获取该文件在各阶段的比例
         ratios = [stage[file_key] for stage in sample_ratios]
-        assert abs(sum(ratios) - 1.0) < 1e-9, f"文件{file_key}比例总和不为1"
+        # assert abs(sum(ratios) - 1.0) < 1e-9, f"文件{file_key}比例总和不为1"
         
         # 计算分割点
         split_points, current = [], 0

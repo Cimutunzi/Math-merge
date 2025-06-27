@@ -2,7 +2,7 @@ import json
 
 def split_by_dot_with_ratio(text: str, ratio: float = 0.5):
     target_index = int(len(text) * ratio)
-    dot_positions = [i for i, c in enumerate(text) if c == '.']
+    dot_positions = [i for i, c in enumerate(text) if c == '  ']
 
     if not dot_positions:
         return text[:target_index].strip(), text[target_index:].strip()
@@ -20,7 +20,7 @@ def process_jsonl_file_fixed_fields(input_path, output_path, ratio=0.5):
                 item = json.loads(line)
                 idx = item.get('idx')
                 question = item.get('question', '').strip()
-                answer = item.get('answer', '').strip()
+                answer = item.get('solution', '').strip()
 
                 if not answer:
                     continue
@@ -42,7 +42,7 @@ def process_jsonl_file_fixed_fields(input_path, output_path, ratio=0.5):
 
 # 使用方法
 process_jsonl_file_fixed_fields(
-    '/data/qq/models/Qwen/Qwen2.5-Math-7B/math_eval/math-merge/data/tem_0.7/level_3.jsonl', 
-    '/data/qq/math-evaluation-harness/data/math-merge/qwen_math_7b_level_3_step_3-4.jsonl', 
+    '/data/qq/models/Qwen/Qwen2.5-Math-1.5B/math_eval/math-merge/data/tem_0.7/level_3.jsonl', 
+    '/data/qq/math-evaluation-harness/data/math-merge/qwen_math_1.5b_level_3_step_3-4.jsonl', 
     ratio=0.75
     )

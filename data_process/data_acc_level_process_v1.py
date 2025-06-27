@@ -3,8 +3,8 @@ import os
 import json
 
 # 设置文件路径
-input_file = '/data/qq/models/deepseek-math-7b-instruct/math_eval/math-merge/Recording/train_deepseek-math_seed0_t0.7_n_sample_16.jsonl'  # 输入文件路径
-out_pre = f'/data/qq/models/deepseek-math-7b-instruct/math_eval/math-merge/data/tem_0.7'
+input_file = '/data/qq/models/Meta-Llama-3.1-8B-Instruct/math_eval/math-merge/Recording/train_direct_seed0_t0.7_n_sample_16.jsonl'  # 输入文件路径
+out_pre = f'/data/qq/models/Meta-Llama-3.1-8B-Instruct/math_eval/math-merge/data/tem_0.7'
 
 output_file_1 = f'{out_pre}/level_1.jsonl'  # 输出文件路径
 output_file_2 = f'{out_pre}/level_2.jsonl'  # 输出文件路径
